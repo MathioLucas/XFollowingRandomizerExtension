@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "X Following Randomizer",
+  "version": "1.1",
+  "description": "Mimic the For You page by randomizing tweets in the Following tab.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "X Following Randomizer"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
